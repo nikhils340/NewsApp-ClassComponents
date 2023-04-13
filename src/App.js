@@ -25,7 +25,7 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <Router>
+        <HashRouter>
             <NavBar/>
             <LoadingBar
                 color='#f11946'
@@ -43,7 +43,7 @@ export default class App extends Component {
             <Route exact path="/sports"><News setProgress={this.setProgress} apiKey={this.apiKey} key="sports"pageSize={this.pageSize} country='in' category='sports'/></Route>
             <Route exact path="/technology"><News setProgress={this.setProgress} apiKey={this.apiKey} key="technology"pageSize={this.pageSize} country='in' category='technology'/></Route>
         </Switch>
-        </Router>
+        </HashRouter>
       </div>
     )
   }
